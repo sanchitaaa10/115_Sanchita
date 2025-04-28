@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    <title>Your Name - Personal Portfolio</title>
+   
+</head>
+<style>
+    /* General Styles */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+    }
+    
+    body {
+        font-family: 'Poppins', sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background: linear-gradient(135deg, #f4f4f4, #e0e0e0);
+    }
+    
+    section {
+        padding: 50px 20px;
+        margin: 20px 0;
+    }
+    
+    h1, h2 {
+        color: #222;
+        margin-bottom: 20px;
+    }
+    
+    ul {
+        list-style: none;
+    }
+    
+    /* Hero Section */
+    .hero {
+        text-align: center;
+        background: linear-gradient(to right, #6a11cb, #2575fc);
+        color: #fff;
+        padding: 80px 20px;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .hero h1 {
+        font-size: 3.5rem;
+        animation: fadeInDown 1s ease-in-out;
+    }
+    
+    .hero h2 {
+        font-size: 2rem;
+        margin-top: 10px;
+        animation: fadeInUp 1s ease-in-out;
+    }
+    
+    .profile-img {
+        border-radius: 50%;
+        width: 160px;
+        height: 160px;
+        margin-top: 30px;
+        border: 5px solid #fff;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* About Section */
+    .about {
+        background: #fff;
+        text-align: center;
+        padding: 60px 20px;
+    }
+    
+    .about p {
+        max-width: 600px;
+        margin: 0 auto;
+        font-size: 1.1rem;
+    }
+    
+    /* Skills Section */
+    .skills {
+        background: #f7f7f7;
+        text-align: center;
+    }
+    
+    .skills ul {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        padding-top: 20px;
+    }
+    
+    .skills li {
+        background: #fff;
+        padding: 12px 25px;
+        border-radius: 30px;
+        box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+        transition: 0.3s ease;
+    }
+    
+    .skills li:hover {
+        background: linear-gradient(to right, #6a11cb, #2575fc);
+        color: #fff;
+        transform: scale(1.1);
+    }
+    
+    /* Projects Section */
+    .projects {
+        background: #fff;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    
+    .project-card {
+        background: linear-gradient(145deg, #f0f0f0, #cacaca);
+        padding: 20px;
+        margin: 10px;
+        border-radius: 15px;
+        width: 280px;
+        transition: transform 0.3s, background 0.3s;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .project-card:hover {
+        transform: translateY(-10px);
+        background: linear-gradient(135deg, #a8edea, #fed6e3);
+    }
+    
+    .project-card h3 {
+        font-size: 1.6rem;
+        margin-bottom: 10px;
+    }
+    
+    .project-card p {
+        font-size: 1rem;
+        color: #555;
+    }
+    
+    /* Contact Section */
+    .contact {
+        background: #333;
+        color: #fff;
+        text-align: center;
+    }
+    
+    .contact form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .contact label {
+        margin: 10px 0 5px;
+    }
+    
+    .contact input, .contact textarea {
+        padding: 12px;
+        width: 80%;
+        margin: 10px 0;
+        border: none;
+        border-radius: 5px;
+        background: #555;
+        color: #fff;
+    }
+    
+    .contact input:focus, .contact textarea:focus {
+        outline: 2px solid #5cb85c;
+        background: #666;
+    }
+    
+    .contact button {
+        background-color: #5cb85c;
+        color: white;
+        padding: 12px 25px;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: background 0.3s ease, transform 0.3s;
+        margin-top: 20px;
+    }
+    
+    .contact button:hover {
+        background-color: #4cae4c;
+        transform: scale(1.05);
+    }
+    
+    /* Animations */
+    @keyframes fadeInDown {
+        0% {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    @keyframes fadeInUp {
+        0% {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    /* Mobile Responsive Styles */
+    @media (max-width: 600px) {
+        .projects {
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        .project-card {
+            width: 90%;
+        }
+    
+        .profile-img {
+            width: 120px;
+            height: 120px;
+        }
+    
+        .skills ul {
+            flex-direction: column;
+        }
+    
+        h1 {
+            font-size: 2.5rem;
+        }
+    
+        h2 {
+            font-size: 1.5rem;
+        }
+    }
+    </style>
+    
+
+
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Sanchita Suryawanshi</h1>
+        <h2>Web Developer</h2>
+        <img src="https://media-bom2-4.cdn.whatsapp.net/v/t61.24694-24/491840340_1435220017857900_6000680555644687982_n.jpg?ccb=11-4&oh=01_Q5Aa1QGnuKCv_fUAl1EeihQtrFY6BbzQ7ieOk_q7LTIrcMnkuw&oe=681C87B6&_nc_sid=5e03e0&_nc_cat=100" alt="Your Photo" class="profile-img">
+    </section>
+
+    <!-- About Me Section -->
+    <section class="about">
+        <h2>About Me</h2>
+        <p>Hi, I'm Sanchita Suryawanshi, a passionate web developer with experience in HTML, CSS, JavaScript, and more. I enjoy creating user-friendly websites and web applications. I love problem-solving and learning new technologies.</p>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Python</li>
+            <li>Java</li>
+        </ul>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects">
+        <h2>Projects</h2>
+        <div class="project-card">
+            <h3>Project 1</h3>
+            <p>Short description of Project 1.</p>
+        </div>
+        <div class="project-card">
+            <h3>Project 2</h3>
+            <p>Short description of Project 2.</p>
+        </div>
+        <div class="project-card">
+            <h3>Project 3</h3>
+            <p>Short description of Project 3.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <h2>Contact Me</h2>
+        <form action="#">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+</body>
+
+</html>
